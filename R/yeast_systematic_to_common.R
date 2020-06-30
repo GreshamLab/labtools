@@ -1,10 +1,10 @@
-#' Yeast Systematic to Common Gene Name
-#'
-#' This is  function named 'yeast_systematic_to_common'
-#' which prints takes a systematic yeast gene name and returns the common name.
+#' @name yeast systematic to common
+#' @title yeast_systematic_to_common
 #'
 #'
-
+#' @examples
+#' yeast_systematic_to_common("YFL039C")
+#'
 
 load("data/yeast_gene_names.RData")
 yeast_gene_names[yeast_gene_names == ""] = NA

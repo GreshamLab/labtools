@@ -2,10 +2,14 @@
 
 A package of useful R functions used in the Gresham Lab for data analysis
 
-to load in R:
+to load package in R:
 
 >install_github("GreshamLab/labtools")
 
-available functions"
+available functions:
 
-yeast_systematic_to_common()
+>yeast_systematic_to_common()
+
+for information on how to run function:
+
+>?yeast_systematic_to_common

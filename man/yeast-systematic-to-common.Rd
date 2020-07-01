@@ -3,6 +3,12 @@
 \name{yeast systematic to common}
 \alias{yeast systematic to common}
 \title{yeast_systematic_to_common}
+\arguments{
+\item{name_vec}{a vector of systematic names.}
+}
+\value{
+A vector of common names. If no common name is found, returns systematic name
+}
 \description{
 yeast_systematic_to_common
 }

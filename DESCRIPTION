@@ -4,8 +4,11 @@ Title: Useful Tools for the Gresham Lab
 Version: 0.1.0
 Author: The Gresham Lab
 Maintainer: The package maintainer <dg107@nyu.edu>
-Description: Function written by members of the Grehsam lab
-License: WMIT + license
+Description: Functions written by members of the Gresham lab
+Depends: R (>= 3.5.0)
+License: MIT + license
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+Imports:
+    tidyverse

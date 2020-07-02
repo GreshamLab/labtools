@@ -8,7 +8,6 @@
 #' @param feature_source is what you want in the source column
 #' @param output is what you want your output gff to be called (should be .gff)
 #' @return A file formatted as a gff
-#' @examples make_gff_from_snap(input,chr2, column1, output.gff)
 #' @author Grace Avecilla \email{ga824@@nyu.edu }
 #' @importFrom magrittr %>%
 #' @importFrom readr read_csv
@@ -21,7 +20,7 @@
 
 make_gff_from_snap = function(file_path, chromosome, feature_source, output) {
   feats = readr::read_csv(file_path, col_names = F)
-  feats_edit = feats %>% dyplr::mutate(seqid = chromosome, source = feature_source,
+  feats_edit = feats %>% dplyr::mutate(seqid = chromosome, source = feature_source,
                                 score = '.', phase = '.') %>%
     dplyr::mutate(strand = dplyr::case_when(X4 == '<=' ~ '-',
                                             X4 == '==' ~ '+',

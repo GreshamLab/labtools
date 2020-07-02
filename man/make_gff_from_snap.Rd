@@ -22,9 +22,6 @@ A file formatted as a gff
 this is a function that takes a csv with features generated from snapgene, and converts it into a gff format
 when exporting features from snapgene, export all feature data (csv should have 5 columns)
 }
-\examples{
-make_gff_from_snap(input,chr2, column1, output.gff)
-}
 \author{
 Grace Avecilla \email{ga824@nyu.edu }
 }

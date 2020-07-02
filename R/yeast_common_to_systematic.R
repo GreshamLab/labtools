@@ -6,6 +6,7 @@
 #' @examples
 #' yeast_common_to_systematic("GAP1")
 #'
+#' @export
 
 load("data/yeast_gene_names.RData")
 

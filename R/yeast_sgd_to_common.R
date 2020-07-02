@@ -6,6 +6,7 @@
 #' @examples
 #' yeast_sgd_to_common("SGD:S000005086")
 #'
+#' @export
 
 load("data/yeast_gene_names.RData")
 

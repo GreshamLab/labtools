@@ -6,6 +6,7 @@
 #' @examples
 #' yeast_systematic_to_common("YFL039C")
 #'
+#' @export
 
 load("data/yeast_gene_names.RData")
 

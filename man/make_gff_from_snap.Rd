@@ -23,7 +23,8 @@ this is a function that takes a csv with features generated from snapgene, and c
 when exporting features from snapgene, export all feature data (csv should have 5 columns)
 }
 \examples{
-make_gff_from_snap(input, II, column 1, output.gff)
+make_gff_from_snap(input,chr2, column1, output.gff)
 }
-\keyword{Avecilla}
-\keyword{Grace}
+\author{
+Grace Avecilla \email{ga824@nyu.edu }
+}

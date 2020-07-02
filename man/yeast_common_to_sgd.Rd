@@ -15,4 +15,5 @@ yeast_common_to_sgd
 \examples{
 yeast_common_to_sgd("GAL4")
 
+#' @export
 }

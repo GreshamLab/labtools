@@ -6,6 +6,7 @@
 #' @examples
 #' yeast_sgd_to_systematic("SGD:S000000979")
 #'
+#' @export
 
 load("data/yeast_gene_names.RData")
 

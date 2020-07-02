@@ -6,6 +6,7 @@
 #' std_err(c(4,4,5,5,6,6))
 #' std_err(rnorm(100))
 #' @seealso \url{https://github.com/davidgresham/davidtools}
+#' @export
 
 std_err <- function(x) {
   s <- sd(x)/sqrt(length(x))

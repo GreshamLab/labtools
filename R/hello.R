@@ -7,7 +7,7 @@
 #'
 #'   https://github.com/GreshamLab/labtools
 #'
-
+#' @export
 
 hello <- function() {
   print("Hello, Gresham Lab!")

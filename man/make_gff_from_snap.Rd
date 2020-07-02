@@ -22,6 +22,11 @@ A file formatted as a gff
 this is a function that takes a csv with features generated from snapgene, and converts it into a gff format
 when exporting features from snapgene, export all feature data (csv should have 5 columns)
 }
+\examples{
+\dontrun{
+labtools::make_gff_from_snap("~/Projects/Data/SnapBarcodeLibrary1.csv", chromosome = "II", feature_source = "levy_bc", output = "./Bc.gff")
+}
+}
 \author{
 Grace Avecilla \email{ga824@nyu.edu }
 }

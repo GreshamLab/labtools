@@ -7,6 +7,10 @@
 #' @param chromosome is the chromosome the features are on.
 #' @param feature_source is what you want in the source column
 #' @param output is what you want your output gff to be called (should be .gff)
+#' @examples
+#' \dontrun{
+#' labtools::make_gff_from_snap("~/Projects/Data/SnapBarcodeLibrary1.csv", chromosome = "II", feature_source = "levy_bc", output = "./Bc.gff")
+#' }
 #' @return A file formatted as a gff
 #' @author Grace Avecilla \email{ga824@@nyu.edu }
 #' @importFrom magrittr %>%

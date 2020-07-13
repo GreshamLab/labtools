@@ -1,0 +1,37 @@
+---
+title: "labtools-vignette"
+author: "The Gresham Lab"
+date: "7/13/2020"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{labtools-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(labtools)
+```
+
+This vignette provides examples of how to use functions in the package *labtool*, which includes a set of useful functions developed in the [Gresham Lab](https://greshamlab.bio.nyu.edu/).
+
+Available functions inlclude:
+
+1. gff_from_snapgene_features()
+2. hello()
+3. std_err()
+4. yeast_common_to_sgd()
+5. yeast_common_to_systematic()
+6. yeast_gene_names()
+7. yeast_r64_to_systematic()
+8. yeast_sgd_to_common()
+9. yeast_sgd_to_systematic()
+10. yeast_systematic_to_common()
+11. yeast_systematic_to_sgd()

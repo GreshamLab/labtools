@@ -6,30 +6,26 @@ to load package in R:
 
 >library(devtools)
 
->install_github("GreshamLab/labtools")
+>install_github("GreshamLab/labtools", build_vignettes = TRUE)
 
-available functions:
+to view the vignette use:
 
->gff_from_snapgene_features.R
+>help(package = 'labtools', help_type = 'html')
 
->hello.R
+where you can see the currently available functions:
 
->std_err.R
+1. gff_from_snapgene_features()
+2. hello()
+3. std_err()
+4. yeast_common_to_sgd()
+5. yeast_common_to_systematic()
+6. yeast_gene_names()
+7. yeast_r64_to_systematic()
+8. yeast_sgd_to_common()
+9. yeast_sgd_to_systematic()
+10. yeast_systematic_to_common()
+11. yeast_systematic_to_sgd()
 
->yeast_common_to_sgd.R
-
->yeast_common_to_systematic.R
-
->yeast_r64_to_systematic.R
-
->yeast_sgd_to_common.R
-
->yeast_sgd_to_systematic.R
-
->yeast_systematic_to_common.R
-
->yeast_systematic_to_sgd.R
-
-for information on how to run function:
+for information on how to run a specific function:
 
 >?yeast_systematic_to_common

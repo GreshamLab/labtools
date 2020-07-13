@@ -8,11 +8,11 @@ to load package in R:
 
 >install_github("GreshamLab/labtools", build_vignettes = TRUE)
 
-to view the vignette use:
+## to learn how to use functions in labtools() view the vignette by typing:
 
 >help(package = 'labtools', help_type = 'html')
 
-where you can see the currently available functions:
+## The currently available functions:
 
 1. gff_from_snapgene_features()
 2. hello()
@@ -26,6 +26,6 @@ where you can see the currently available functions:
 10. yeast_systematic_to_common()
 11. yeast_systematic_to_sgd()
 
-for information on how to run a specific function:
+## for information on how to run a specific function:
 
 >?yeast_systematic_to_common

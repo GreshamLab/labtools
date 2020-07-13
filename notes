@@ -1,0 +1,16 @@
+use devtools::build() to create a package bundle with the vignettes included.
+RStudio’s “Build & reload” does not build vignettes to save time.
+Similarly, devtools::install_github() (and friends) will not build vignettes by default because they’re time consuming and may require additional packages.
+You can force building with devtools::install_github(build_vignettes = TRUE). This will also install all suggested packages.
+
+My hack:
+
+1. use devtools::build() to create a package bundle with the vignettes include
+2. unzip the tar
+3. Move inst/doc folder to working directory
+
+Seems like this may not be necessary, b/c if you install using:
+
+install_github("GreshamLab/labtools", build_vignettes = TRUE)
+
+Then the installed version comes with the vignette

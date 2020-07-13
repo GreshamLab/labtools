@@ -35,3 +35,66 @@ Available functions inlclude:
 9. yeast_sgd_to_systematic()
 10. yeast_systematic_to_common()
 11. yeast_systematic_to_sgd()
+
+to install this package and vignette:
+
+`library(devtools)`
+`install_github("GreshamLab/labtools", build_vignettes = TRUE)`
+
+to view vignette:
+
+`help(package = 'labtools', help_type = 'html')`
+
+or 
+
+`vignette("labtool-vignette")`
+
+## Below are some examples of how to use the functions and the expected output
+
+### 1. How to make a gff from a snap gene file.
+
+To run this example, download an example file (`SnapBarcodeLibrary1.csv`) from [here](https://drive.google.com/drive/folders/1Yrr3QSx4mJXIJmhNAc80astYtplfQGHZ?usp=sharing)
+
+```{r}
+make_gff_from_snap(file_path = "../../data/SnapBarcodeLibrary1.csv", chromosome = "II", feature_source = "levy_bc", output = "../../data/Barcode.gff")
+```
+
+
+The resulting gff (`Barcode.gff `) should be a plain text tab delimited file that looks like like this:
+
+```{r}
+file.show('../../data/Barcode.gff')
+```
+
+```
+II	levy_bc	misc_feature	1001	1003	.	+	.	YBR209W
+II	levy_bc	misc_feature	1004	1028	.	+	.	PEV9
+II	levy_bc	misc_feature	1036	1514	.	+	.	GAL1 promoter
+II	levy_bc	misc_feature	1611	2642	.	+	.	Cre
+II	levy_bc	misc_feature	2133	2153	.	+	.	P23
+II	levy_bc	misc_feature	2960	3211	.	+	.	CYC1 terminator
+II	levy_bc	misc_feature	3220	3253	.	+	.	lox66/71
+II	levy_bc	misc_feature	3233	3240	.	+	.	LoxP core
+II	levy_bc	misc_feature	3262	3513	.	-	.	CYC1 terminator
+II	levy_bc	misc_feature	3831	4057	.	-	.	Cre (truncated)
+II	levy_bc	misc_feature	4088	4566	.	-	.	GAL1 promoter
+II	levy_bc	misc_feature	7765	8715	.	-	.	HygMX
+II	levy_bc	misc_feature	9174	9308	.	+	.	URA3 promoter
+II	levy_bc	gene	9309	9497	.	+	.	URA3
+II	levy_bc	misc_feature	9498	9503	.	+	.	Artificial Intron Start
+II	levy_bc	misc_feature	9503	9527	.	+	.	Forward Sequencing Primer
+II	levy_bc	misc_feature	9552	9577	.	+	.	BC2
+II	levy_bc	misc_feature	9578	9611	.	+	.	loxP
+II	levy_bc	misc_feature	9591	9598	.	+	.	loxP core
+II	levy_bc	misc_feature	9612	9637	.	+	.	BC1
+II	levy_bc	misc_feature	9646	9669	.	+	.	Reverse Sequencing Primer
+II	levy_bc	misc_feature	9675	9681	.	+	.	Artificial intron branch point
+II	levy_bc	misc_feature	9700	9702	.	+	.	Artificial intron terminator
+II	levy_bc	misc_feature	9703	10317	.	+	.	URA3
+II	levy_bc	misc_feature	10318	10394	.	+	.	URA3 terminator
+II	levy_bc	gene	10754	11563	.	+	.	kanMX
+II	levy_bc	misc_feature	11696	11715	.	+	.	NatMx
+II	levy_bc	misc_feature	11696	11715	.	-	.	PEV8
+II	levy_bc	misc_feature	11716	11718	.	+	.	YBR209W`
+```
+

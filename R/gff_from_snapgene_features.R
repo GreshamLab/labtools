@@ -33,5 +33,5 @@ make_gff_from_snap = function(file_path, chromosome, feature_source, output) {
     dplyr::rename(attributes = X1, type = X5) %>%
     dplyr::select(seqid, source, type, start, end, score, strand, phase, attributes)
 
-  readr::write_tsv(feats_edit, path = output, col_names = F)
+  readr::write_tsv(feats_edit, file = output, col_names = F)
 }

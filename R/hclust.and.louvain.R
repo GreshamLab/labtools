@@ -21,11 +21,33 @@ hclust.and.louvain <- function(data, nearest.neighbors=25, dist.method="euclidea
   dist.obj <- dist(data, method = dist.method)
   
   if (is.null(knn.graph)) {
+
+    # Turn dist object into an adjacency matrix w/NAs
     cut.distances <- as.matrix(dist.obj)
     cut.distances[upper.tri(cut.distances, diag = T)] <- NA
     cut.distances <- apply(cut.distances, 1, cut.knn, nn=nearest.neighbors)
+
+    # Invert distance for weights
     cut.distances <- 1 / cut.distances
-    cut.distances[is.na(cut.distances)] <- 0
+    
+    # Fix inverse distances
+    # Which are otherwise full of NAs/Infs
+    # Interval normalize so the max value is 1
+    fix.inverse.dist <- function(x) {
+      x[is.na(x)] <- 0
+      x[!is.finite(x)] <- max(max(x[is.finite(x)], na.rm=T), 1)
+      x.min <- min(x, na.rm=T)
+      x.max <- max(x, na.rm=T)
+      if(x.min != x.max) {x <- (x - x.min) / (x.max - x.min)}
+      return(x)
+    }
+
+    gene.dist <- apply(gene.dist, 1, fix.inverse.dist)
+
+    # Set diagonal to 1 explicitly
+    diag(gene.dist) <- 1
+
+    # Make the kNN graph
     knn.graph <- graph.adjacency(cut.distances, mode = "undirected", weighted = TRUE, diag = TRUE)
   }
 
